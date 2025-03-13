@@ -7,3 +7,7 @@ class UserForm(forms.ModelForm):
         model=User
         fields=['name','email','password']
 
+class login_form(forms.Form):
+    email=forms.EmailField(max_length=100)
+    password=forms.CharField(widget=forms.PasswordInput())
+
